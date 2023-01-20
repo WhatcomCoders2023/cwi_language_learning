@@ -1,0 +1,19 @@
+{
+"manifest_version": 3,
+"name": "Vocabulary Extractor",
+"version": "1.0.0",
+"description": "Language learning application that leverages CWI models",
+"icons": {
+    "16": "Vocabulary Extractor.png",
+    "48": "Vocabulary Extractor.png",
+    "128": "Vocabulary Extractor.png"
+},
+    "action": {
+        "default_icon": {
+            "16": "Vocabulary Extractor.png",
+            "24": "Vocabulary Extractor.png",
+            "32": "Vocabulary Extractor.png"
+        },
+        "default_title": "Vocabulary Extractor"
+    }
+}
