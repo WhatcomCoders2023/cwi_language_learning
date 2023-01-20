@@ -4,16 +4,21 @@
 "version": "1.0.0",
 "description": "Language learning application that leverages CWI models",
 "icons": {
-    "16": "Vocabulary Extractor.png",
-    "48": "Vocabulary Extractor.png",
-    "128": "Vocabulary Extractor.png"
+    "16": "images/Vocabulary Extractor.png",
+    "48": "images/Vocabulary Extractor.png",
+    "128": "images/Vocabulary Extractor.png"
 },
     "action": {
         "default_icon": {
-            "16": "Vocabulary Extractor.png",
-            "24": "Vocabulary Extractor.png",
-            "32": "Vocabulary Extractor.png"
+            "16": "images/Vocabulary Extractor.png",
+            "24": "images/Vocabulary Extractor.png",
+            "32": "images/Vocabulary Extractor.png"
         },
-        "default_title": "Vocabulary Extractor"
+        "default_title": "Vocabulary Extractor",
+        "default_popup": "popup/popup.html"
+    },
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "scripts/background.js"
     }
 }
