@@ -1,0 +1,32 @@
+{
+  "name": "cwi_language_learning",
+  "version": "1.0.0",
+  "description": "1. Chrome-types - npm i chrome-types",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .ts",
+    "build": "webpack --config webpack/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhatcomCoders2023/cwi_language_learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WhatcomCoders2023/cwi_language_learning/issues"
+  },
+  "homepage": "https://github.com/WhatcomCoders2023/cwi_language_learning#readme",
+  "devDependencies": {
+    "@types/chrome": "^0.0.235",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "dependencies": {
+    "copy-webpack-plugin": "^11.0.0"
+  }
+}
