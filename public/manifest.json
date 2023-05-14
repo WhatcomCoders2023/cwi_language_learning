@@ -9,6 +9,7 @@
     "128": "Vocabulary Extractor.png"
   },
   "action": {
+    "default_popup": "popup.html",
     "default_icon": {
       "16": "Vocabulary Extractor.png",
       "24": "Vocabulary Extractor.png",

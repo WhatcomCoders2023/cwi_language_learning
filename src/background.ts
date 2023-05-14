@@ -1,9 +1,30 @@
-chrome.browserAction.onClicked.addListener((tab: chrome.tabs.Tab) => {
-  if (!tab.id) return;
-  chrome.tabs.sendMessage(tab.id, { type: 'getText' }, (response: any) => {
-    const text = response as string;
-    console.log(text);
+interface Tab {
+  id?: number;
+}
 
-    // You can handle the collected text here, e.g., send it to a server, save it to a file, etc.
-  });
+interface ExecuteScriptArguments {
+  target: { tabId: number };
+  function: () => string;
+}
+
+function extractText(): string {
+  return document.body.innerText;
+}
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  if (request.action === 'extractText') {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (!tabs[0].id) return;
+      chrome.scripting
+        .executeScript({
+          target: { tabId: tabs[0].id },
+          func: extractText,
+        })
+        .then((results) => {
+          if (results.length > 0) {
+            console.log(results[0].result);
+          }
+        });
+    });
+  }
 });
